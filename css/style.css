@@ -1,0 +1,270 @@
+/* 기본 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+/* 헤더 */
+.main-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* 컨테이너 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* 주제 그리드 */
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* 주제 카드 */
+.topic-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    border-color: #667eea;
+}
+
+.topic-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.topic-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* 상세 페이지 헤더 */
+.detail-header {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #f5f7fa;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #e1e5ea;
+}
+
+.topic-header-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.author-info {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 콘텐츠 영역 */
+.content-area {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.content-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.image-section {
+    margin-bottom: 60px;
+}
+
+.content-image {
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 네비게이션 버튼 */
+.navigation-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 60px 0;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    min-width: 150px;
+    text-align: center;
+}
+
+.nav-button.prev {
+    background: #e1e5ea;
+    color: #333;
+}
+
+.nav-button.prev:hover {
+    background: #d1d5da;
+}
+
+.nav-button.list {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.nav-button.list:hover {
+    background: #667eea;
+    color: white;
+}
+
+.nav-button.next {
+    background: #667eea;
+    color: white;
+}
+
+.nav-button.next:hover {
+    background: #5568d3;
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 푸터 */
+.main-footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+.main-footer a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .topic-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .topic-number {
+        font-size: 2.5rem;
+    }
+    
+    .topic-title {
+        font-size: 1.1rem;
+    }
+    
+    .detail-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .topic-header-title {
+        font-size: 1.4rem;
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+    }
+    
+    .nav-button {
+        width: 100%;
+    }
+}
